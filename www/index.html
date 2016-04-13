@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="webMap">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+  </head>
+    
+  <body ng-controller="MainCtrl as mc">
+  	<main-cmp></main-cmp>
+    <script type="text/javascript" src="jspm_packages/system.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script>
+      var CESIUM_BASE_URL = 'node_modules/cesium/Build/Cesium';
+      System.import('./app.mdl');
+    </script>
+    
+    </body>
+</html>

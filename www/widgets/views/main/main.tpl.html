@@ -1,0 +1,41 @@
+<section layout="row" flex style="height: 100%;">
+    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-disable-backdrop
+        md-whiteframe="2">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Side Navigation Menu</h1>
+      </md-toolbar>
+      <input type="file" id="uploadfiles" multiple="multiple" />
+      <md-content layout-padding ng-controller="LeftCtrl as lc">
+        <md-button ng-click="lc.close()" class="md-primary" hide-gt-md>
+          Close Sidenav Left
+        </md-button>
+      </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+      <md-button ng-click="mc.toggleLeft()"
+        class="md-primary" hide-gt-md>
+        Open Menu
+      </md-button>
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Cesium">
+          <md-content class="md-padding">
+            <cesium-map></cesium-map>
+          </md-content>
+        </md-tab>
+        <md-tab label="OpenLayers 3">
+          <md-content class="md-padding">
+            <ol-map></ol-map>
+          </md-content>
+        </md-tab>
+        <md-tab label="geoJson">
+          <md-content class="md-padding">
+        </md-tab>
+      </md-tabs>
+      <div flex></div>
+    </md-content>
+    
+  </section>
